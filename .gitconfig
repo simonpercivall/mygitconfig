@@ -8,6 +8,7 @@
     # email = 
 
 [alias]
+    # basic shortcuts
     b = branch -avv
     t = tag
     d = diff
@@ -16,13 +17,17 @@
     co = checkout
     stat = status
     st   = status
+    unstage = reset HEAD --
+
+    # log commands
     wc = whatchanged --abbrev-commit --date=relative --date-order --pretty='format:%Cgreen%h %Cblue%ar %Credby %an%Creset -- %s' -n 45
     logp = !GIT_PAGER='less -n +/^commit: ' git log --color --patch-with-stat
     logs = !GIT_PAGER='less -n +/^commit: ' git log --stat --no-merges
     glog = log --graph --all --branches --date-order
     oglog = log --oneline --graph --all --branches --date-order
+
+    # meld
     meld = difftool -t meld
-    unstage = reset HEAD --
 
 [format]
     pretty=%C(yellow)commit: %h%Cblue%d%Creset%nAuthor: %an%nDate:   %ad%n%n     %s%n
