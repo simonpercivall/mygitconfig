@@ -28,6 +28,10 @@
 
     # meld
     meld = difftool -t meld
+    
+    # git svn
+    spull = svn rebase
+    spush = svn dcommit
 
 [format]
     pretty=%C(yellow)commit: %h%Cblue%d%Creset%nAuthor: %an%nDate:   %ad%n%n     %s%n
