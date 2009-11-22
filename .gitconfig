@@ -15,6 +15,7 @@
     ci = commit -v
     co = checkout
     stat = status
+    st   = status
     wc = whatchanged --abbrev-commit --date=relative --date-order --pretty='format:%Cgreen%h %Cblue%ar %Credby %an%Creset -- %s' -n 45
     logp = !GIT_PAGER='less -n +/^commit: ' git log --color --patch-with-stat
     logs = !GIT_PAGER='less -n +/^commit: ' git log --stat --no-merges
