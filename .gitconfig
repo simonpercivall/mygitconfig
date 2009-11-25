@@ -27,6 +27,9 @@
     glog = log --graph --all --branches --date-order
     oglog = log --oneline --graph --all --branches --date-order
 
+    # search
+    search = "!f() { git logp -S\"$1\"; }; f"
+
     # meld
     meld = difftool -t meld
     
