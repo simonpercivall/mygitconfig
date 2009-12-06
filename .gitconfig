@@ -22,8 +22,8 @@
 
     # log commands
     wc = whatchanged --abbrev-commit --date=relative --date-order --pretty='format:%Cgreen%h %Cblue%ar %Credby %an%Creset -- %s' -n 45
-    logp = !GIT_PAGER='less -n +/^commit: ' git log --patch-with-stat
-    logs = !GIT_PAGER='less -n +/^commit: ' git log --stat --no-merges
+    logp = !LESS='-FRX' GIT_PAGER='less -n +/^commit: ' git log --patch-with-stat
+    logs = !LESS='-FRX' GIT_PAGER='less -n +/^commit: ' git log --stat --no-merges
     glog = log --graph --all --branches --date-order
     oglog = log --oneline --graph --all --branches --date-order
 
