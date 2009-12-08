@@ -98,3 +98,6 @@
 
 [diff "word"]
     textconv = strings
+
+[push]
+    default = tracking
