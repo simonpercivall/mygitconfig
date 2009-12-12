@@ -22,13 +22,13 @@
 
     # log commands
     wc = whatchanged --abbrev-commit --date=relative --date-order --pretty='format:%Cgreen%h %Cblue%ar %Credby %an%Creset -- %s' -n 45
-    logp = !LESS='-FRX' GIT_PAGER='less -n +/^commit: ' git log --patch-with-stat
-    logs = !LESS='-FRX' GIT_PAGER='less -n +/^commit: ' git log --stat --no-merges
+    logp = "!f() { LESS='-FRX' GIT_PAGER='less -n +/^commit: ' git log --patch-with-stat $@; }; f"
+    logs = "!f() { LESS='-FRX' GIT_PAGER='less -n +/^commit: ' git log --stat --no-merges $@; }; f"
     glog = log --graph --all --branches --date-order
     oglog = log --oneline --graph --all --branches --date-order
 
     # search
-    search = "!f() { git logp -S\"$1\"; }; f"
+    search = "!f() { A1=$1; shift; git logp -S\"$A1\" $@; }; f"
 
     # meld
     meld = difftool -t meld
