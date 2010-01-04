@@ -38,7 +38,7 @@
     spush = svn dcommit
 
 [format]
-    pretty=%C(yellow)commit: %h%Cblue%d%Creset%nAuthor: %an%nDate:   %ad%n%n     %s%n
+    pretty=%C(yellow)commit: %h%Cblue%d%Creset%nAuthor: %an%nDate:   %ad%n%n%w(0,4,4)%s%n%b
 
 [merge]
     tool = meld
