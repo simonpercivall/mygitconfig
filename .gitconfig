@@ -2,6 +2,7 @@
     excludesfile = "~/.gitignore"
     editor = vim
     autcrlf = input
+    whitespace = cr-at-eol
 
 [user]
     name = Simon Percivall
@@ -25,7 +26,7 @@
     logp = "!f() { LESS='-FRX' GIT_PAGER='less -n +/^commit: ' git log --patch-with-stat $@; }; f"
     logs = "!f() { LESS='-FRX' GIT_PAGER='less -n +/^commit: ' git log --stat --no-merges $@; }; f"
     glog = log --graph --all --branches --date-order
-    oglog = log --oneline --graph --all --branches --date-order
+    oneline = log --date-order --pretty='format:%Cgreen%h %Cblue%ai %Creset-- %s'
 
     # search
     search = "!f() { A1=$1; shift; git logp -S\"$A1\" $@; }; f"
